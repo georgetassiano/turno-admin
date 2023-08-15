@@ -7,22 +7,22 @@ import { defineStore } from 'pinia'
 
 type AlertType = 'success' | 'error' | 'warning' | 'info'
 interface Alert {
-    type: AlertType
-    message: string
+  type: AlertType
+  message: string
 }
 
 export const useAlertStore = defineStore('alert', {
-    state: () => ({
-        showAlert: false,
-        type: '',
-        message: ''
-    }),
-    actions: {
-        // since we rely on `this`, we cannot use an arrow function
-        enableAlert(alert: Alert) {
-            this.type = alert.type
-            this.message = alert.message
-            this.showAlert = true
-        }
-    },
+  state: () => ({
+    showAlert: false,
+    type: '',
+    message: ''
+  }),
+  actions: {
+    // since we rely on `this`, we cannot use an arrow function
+    enableAlert(alert: Alert) {
+      this.type = alert.type
+      this.message = alert.message
+      this.showAlert = true
+    }
+  }
 })

@@ -12,9 +12,14 @@ const router = createRouter({
       },
       children: [
         {
+          path: '',
+          name: 'home',
+          redirect: { name: 'checks' }
+        },
+        {
           path: 'checks',
           name: 'checks',
-          component: () => import('@/views/checks/CheckPage.vue'),
+          component: () => import('@/views/checks/CheckPage.vue')
         },
         {
           path: 'checks/:id',

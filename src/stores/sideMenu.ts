@@ -5,13 +5,13 @@ import { defineStore } from 'pinia'
 // and `Store` (e.g. `useUserStore`, `useCartStore`, `useProductStore`)
 // the first argument is a unique id of the store across your application
 export const useSideMenuStore = defineStore('sideMenu', {
-    state: () => ({
-        showSideMenu: false,
-    }),
-    actions: {
-        // since we rely on `this`, we cannot use an arrow function
-        changeVisibility() {
-            this.showSideMenu = !this.showSideMenu
-        }
-    },
+  state: () => ({
+    showSideMenu: false
+  }),
+  actions: {
+    // since we rely on `this`, we cannot use an arrow function
+    changeVisibility() {
+      this.showSideMenu = !this.showSideMenu
+    }
+  }
 })

@@ -1,9 +1,9 @@
 <template>
-    <the-side-menu />
-    <the-header />
-    <v-main>
-      <RouterView />
-    </v-main>
+  <the-side-menu />
+  <the-header />
+  <v-main>
+    <RouterView />
+  </v-main>
 </template>
 <script setup lang="ts">
 import TheSideMenu from '@/components/organims/TheSideMenu.vue'
